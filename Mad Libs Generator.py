@@ -2,23 +2,23 @@ import random
 again = True
 
 def random_noun():
-    order = random.choice(noun)
-    pos = noun.index(order)
-    string = str(noun.pop(pos))
-    return string
+    ran_noun = random.choice(noun)
+    pos = noun.index(ran_noun)
+    str_noun = str(noun.pop(pos))
+    return str_noun
 
 def random_adjec():
-    order = random.choice(adjec)
-    pos = adjec.index(order)
-    string = str(adjec.pop(pos))
-    return string
+    ran_adjec = random.choice(adjec)
+    pos = adjec.index(ran_adjec)
+    str_adjec = str(adjec.pop(pos))
+    return str_adjec
 
 
 def random_verb():
-    order = random.choice(verb)
-    pos = verb.index(order)
-    string = str(verb.pop(pos))
-    return string
+    ran_verb = random.choice(verb)
+    pos = verb.index(ran_verb)
+    str_verb = str(verb.pop(pos))
+    return str_verb
 
 
 while again:
@@ -30,17 +30,17 @@ while again:
     verb = []
     while noun_taken < 2:
         print("Give me a noun (example: man, woman, car, toys)")
-        user_input = input()
+        user_input = input().lower()
         noun.append(user_input)
         noun_taken += 1
     while adjec_taken < 2:
         print("Give me an adjective (example: tall, dark, blue, soft)")
-        user_input = input()
+        user_input = input().lower()
         adjec.append(user_input)
         adjec_taken += 1
     while verb_taken < 2:
         print("Give me a verb that ends with -ing (example: working, running, sleeping, drinking)")
-        user_input = input()
+        user_input = input().lower()
         verb.append(user_input)
         verb_taken += 1
 
